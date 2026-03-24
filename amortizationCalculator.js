@@ -6,8 +6,8 @@ function something() {
         let downPayment = Number(prompt("What percent was the down payment(anual percentage rate, or APR)"))
         let loanTerm = Number(prompt("Loan term in years (must be 15 or 30)"));
 
-        if (!principleLoanAmount || !monthlyInterestRate || !loanTerm || loanTerm != 15||30) {
-            throw "error";
+        if (!principleLoanAmount || !monthlyInterestRate || !loanTerm) {
+            throw "error1";
             
         }
 
@@ -21,10 +21,12 @@ function something() {
         let currentLoan = totalLoanCost - totalInterestPaid
 
         let p = document.createAttribute("p");
-        p.textContent = "month: " + i + ": Payment"
+        p.textContent = "Month: " + i + ": Payment"
 
         p.textContent = "Morgage Term:"+ loanTerm;
-        resultsDiv.a
+        p.textContent = "Morgage Term:"+ loanTerm;
+
+        resultsDiv.appendChild(p);
         
         for (let i = 0; i<loanTerm*12; i++) {
             totalLoanCost - monthlyPayment;        
